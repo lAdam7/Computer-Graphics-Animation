@@ -1,0 +1,117 @@
+<head>
+    <link rel="shortcut icon" href="#">
+    <title>Assignment</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three/build/three.module.js",
+                "three/CSS3DRenderer": "https://unpkg.com/three@0.149.0/examples/jsm/renderers/CSS3DRenderer.js",
+                "three/GLTFLoader": "https://unpkg.com/three@0.149.0/examples/jsm/loaders/GLTFLoader.js",
+                "three/OrbitControls": "https://unpkg.com/three@0.149.0/examples/jsm/controls/OrbitControls.js",
+                "tween": "https://unpkg.com/three@0.149.0/examples/jsm/libs/tween.module.min.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="position: absolute; width: 100%; height: 100%; pointer-events: none;">
+        <div id="controls" style="pointer-events: auto;">
+            <h2>CONTROLS</h2>
+            <div class="break"></div>
+            <p>B - Open Build Menu</p>
+            <div class="break"></div>
+            <p>P - Scene Control Menu</p>
+            <div class="break"></div>
+            <p>W, A, S, D - Move camers around when in build mode</p>
+            <div class="break"></div>
+            <p>Q, E - Rotate camera when in build mode</p>
+            <div class="break"></div>
+            <p>I, O - Zoom in and out when in build mode</p>
+            <div class="break"></div>
+            <p>ENTER - Spawn car on road (Won't spawn if no possible turns)</p>
+            <div class="break"></div>
+            <p>F - Launch firework (toggles between 2 styles, must have a firework building placed)</p>
+        </div>
+    
+        <div id="mainScreen" style="pointer-events: auto;">
+            <h1>KF6018 Assignment</h1>
+            <h2>Computer Graphics and Animation</h2>
+            <button id="clearMainMenu">VIEW</button>
+        </div>
+    
+        <div id="sceneControl" style="pointer-events: auto;">
+            <button id="btnSceneControl">Open Scene Control (P)</button>
+            <div class="sceneControlDiv">
+                <p id="roads">Roads: 1</p>
+                <p id="buildings">Buildings: 0</p>
+                </br></br>
+                <p class="title">Rain Speed</p>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="25" value="0" class="slider" id="weatherRange">
+                    <p>Value: <span id="weatherValue"></span></p>
+                </div>
+    
+                <p class="title">Wind Direction</p>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="360" value="0" class="slider" id="directionRange">
+                    <p>Value: <span id="directionValue"></span></p>
+                </div>
+                <p class="title">Wind Strength</p>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="30" value="15" class="slider" id="strengthRange">
+                    <p>Value: <span id="strengthValue"></span></p>
+                </div>
+                <p class="title">Background Colour</p>
+    
+                <label>Colour 1:</label>
+                <input type="color" id="bgColour1" value="#B7CBEB">
+    
+                <label>Colour 2:</label>
+                <input type="color" id="bgColour2" value="#000000">
+                <label>Timescale</label>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="40" value="25" class="slider" id="timescaleRange">
+                    <p>Value: <span id="timescaleValue"></span></p>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div id="buildControl" style="pointer-events: auto;">
+            <button id="btnBuild">Open Build Menu (B)</button>
+            <div class="buildDiv">
+                <button id="road">Place Road</button>
+                <button id="flagbuilding">Building with Flag</button>
+                <button id="fireworkbuilding">Firework Building</button>
+                <button id="pirateship">Pirate Ship</button>
+                <button id="spherebuilding">Sphere Effect</button>
+            </div>
+        </div>
+
+        <p id="guideText">HOLD Z TO VIEW CONTROLS</p>
+    </div>
+    
+
+    <script src="libraries/cannon.js"></script>
+    <script type="module" src="src/assignment.js"></script> 
+
+    <!--
+    <script src="https://threejs.org/build/three.js"></>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="libraries/OrbitControls.js"></script>
+    <script src="libraries/cannon.js"></script>
+    <script src="src/Placement.js"></script>
+    <script src="src/Buildings.js"></script>
+    <script src="src/Road.js"></script>
+    <script src="src/Firework.js"></script>
+    <script src="src/CameraControls/Orbit.js"></script>
+    <script src="src/CameraControls/TopView.js"></script>
+    <script src="src/Car.js"></script>
+    <script src="src/UIEvents.js"></script>
+    
+    <script src="src/assignment.js"></script>-->
+</body>
+
+</html>
