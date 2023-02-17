@@ -1,4 +1,4 @@
-import { OrbitControls } from "three/OrbitControls"
+import { OrbitControls } from "../../libraries/OrbitControls.js"
 
 export default class OrbitControl {
     constructor(camera, renderer) { // setup Orbit controls

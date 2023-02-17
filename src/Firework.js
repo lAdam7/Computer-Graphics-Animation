@@ -1,4 +1,4 @@
-import * as THREE from "three"
+import * as THREE from "../libraries/three.js"
 
 function randFloat(min, max) {
     return Math.random() * (max - min) + min

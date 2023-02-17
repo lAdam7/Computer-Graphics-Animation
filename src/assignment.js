@@ -1,13 +1,7 @@
-import * as THREE from "three"
+import * as THREE from "../libraries/three.js"
 
 var scene = new THREE.Scene();
 
-function addScript(url) {
-    const script = document.createElement('script');
-    script.src = url;
-    script.async = true;
-    document.body.appendChild(script);
-}
 import OrbitControl  from "./CameraControls/Orbit.js"
 import TopView from "./CameraControls/TopView.js"
 import Road from "./Road.js"

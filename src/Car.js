@@ -1,5 +1,5 @@
-import * as THREE from "three"
-import { GLTFLoader } from "three/GLTFLoader"
+import * as THREE from "../libraries/three.js"
+import { GLTFLoader } from "../libraries/GLTFLoader.js"
 const gltfLoader = new GLTFLoader();
 
 let storedRoads = []

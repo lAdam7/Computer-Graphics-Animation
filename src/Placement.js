@@ -1,4 +1,4 @@
-import * as THREE from "three"
+import * as THREE from "../libraries/three.js"
 
 export default class Placement {
     constructor(objName, object, sizeX, sizeY, sizeZ, objectStructure) {
